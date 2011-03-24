@@ -1,0 +1,41 @@
+div.main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 150;
+  text-align:center;
+  font-family: "monaco";
+}
+
+h1 {
+  font-size: 90;
+}
+
+div.links {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 40;
+  text-align:center;
+  font-family: "monaco";
+
+}  
+
+table.links {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 40;
+  text-align:center;
+  font-family: "monaco";
+}
+td {
+  padding:10px;
+}
+
+a {
+  font-size:14;
+}
