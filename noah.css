@@ -1,41 +1,30 @@
+body {
+  background: #bbb;
+}
+
 div.main {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
+  margin: auto;
+  width: 600px;
+  height: 300px;
+  background: #eee;
   top: 150;
-  text-align:center;
-  font-family: "monaco";
+  border-radius: 15px;
+  text-align: center;
+  font-family: "Rosario", cursive;
 }
 
 h1 {
-  font-size: 90;
+  font-size: 70px;
+  padding: 50px 0px 0px 0px;
 }
 
-div.links {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 40;
-  text-align:center;
-  font-family: "monaco";
-
-}  
-
-table.links {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 40;
-  text-align:center;
-  font-family: "monaco";
-}
-td {
-  padding:10px;
-}
 
 a {
-  font-size:14;
+  text-decoration: none;
+  color: #aaa;
+}
+
+a:hover {
+  color: #c06;
 }
