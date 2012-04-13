@@ -1,0 +1,16 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #333;
+}
+
+#content {
+  width: 940px;
+  margin: 0 auto;
+}
+
+textarea{
+  padding: 10px;
+  width: 100%;
+  height: 400px;
+}
