@@ -3,6 +3,14 @@
 
   $(function() {
     var base64, check, checksum, deflated, encoded, input;
+
+    var editor = ace.edit("input-field");
+    if(document.location.search.match("type")) {
+      var type = document.location.search.split("type=")[1].split(/&|#/)[0]
+      var mode = require("ace/mode/" + type).Mode;
+      editor.getSession().setMode(new mode());
+    }
+
     checksum = function(string) {
       var chk, chr, i;
       chk = 0;
@@ -14,12 +22,13 @@
     };
     $('#save-button').click(function() {
       var base64, check, deflated, encoded, input;
-      input = $('#input-field').get(0).value;
+      input = editor.getSession().getValue(); 
       deflated = RawDeflate.deflate(input);
       base64 = Base64.toBase64(deflated);
       check = checksum(base64);
       encoded = base64 + check;
-      return window.location.hash = encoded;
+      window.location.hash = encoded;
+      $("#flash").html("Saved! You can retrieve this paste at <a href='" + document.location.href + "'>" + document.location.href + "</a>");
     });
     if (window.location.hash) {
       encoded = window.location.hash.replace(/^#/, '');
@@ -30,7 +39,7 @@
       } else {
         deflated = Base64.fromBase64(base64);
         input = RawDeflate.inflate(deflated);
-        return $('#input-field').get(0).value = input;
+        return editor.getSession().setValue(input); 
       }
     }
   });
